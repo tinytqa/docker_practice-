@@ -56,22 +56,23 @@ pipeline {
                 '''
             }
         }
-        // dua vao docker image
-		stage('docker image') {
+
+        stage('Build Docker Image') {
             steps {
-                 bat '''
-					  docker build -t p27625:lastest -f "%WORKSPACE%\\Dockerfile" .
-					'''
-                }
+                echo 'Building Docker image p27625:latest'
+                bat 'docker build -t p27625:latest -f "%WORKSPACE%\\Dockerfile" .'
             }
+        }
 
-		// dua vao docker image
-		stage('docker run') {
+        stage('Run Docker Container') {
             steps {
-                  bat 'docker run -d --name p27625run -p 91:80 p27625:lastest'
-                }
+                echo 'Running Docker container from image p27625:latest'
+                // Xoá container cũ nếu tồn tại để tránh lỗi name already in use
+                bat '''
+                    docker rm -f p27625run || echo "No existing container"
+                    docker run -d --name p27625run -p 91:80 p27625:latest
+                '''
             }
-
-
+        }
     }
 }

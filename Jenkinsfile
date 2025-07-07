@@ -35,6 +35,12 @@ pipeline {
                 bat 'dotnet publish TestDocker/TestDocker.sln -c Release -o ./publish'
             }
         }
+        stage('Check DLL name') {
+            steps {
+                bat 'dir /b publish\\*.dll'
+            }
+        }
+
 
         stage('Copy to IIS Folder') {
             steps {

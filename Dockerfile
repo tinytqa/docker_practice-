@@ -24,4 +24,4 @@ EXPOSE 91
 COPY ./publish ./
 
 # Lệnh chạy ứng dụng
-ENTRYPOINT ["dotnet", "P27625.dll"]
+ENTRYPOINT ["dotnet", "TestDocker.dll"]

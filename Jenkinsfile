@@ -22,9 +22,11 @@ pipeline {
             }
         }
 
-        /* Thêm build / test nếu cần */
-        // stage('build') {
-        //     steps { bat 'dotnet build TestDocker/TestDocker.sln --configuration Release' }
-        // }
+        stage ('build') {
+		steps {
+			echo 'build project netcore'
+			bat 'dotnet build  --configuration Release'
+		}
+	}
     }
 }

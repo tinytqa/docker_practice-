@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\",
+  "WorkspaceRootPath": "C:\\Users\\tranq\\OneDrive\\Documents\\GitHub\\docker_practice-\\TestDocker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{75F5763C-4F25-4A80-8B73-B62CF79231F1}|TestDocker.csproj|c:\\users\\tranq\\onedrive\\documents\\it\\uni\\2\\3nd term\\tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\testdocker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{75F5763C-4F25-4A80-8B73-B62CF79231F1}|TestDocker.csproj|c:\\users\\tranq\\onedrive\\documents\\github\\docker_practice-\\testdocker\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{75F5763C-4F25-4A80-8B73-B62CF79231F1}|TestDocker.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75F5763C-4F25-4A80-8B73-B62CF79231F1}|TestDocker.csproj|c:\\users\\tranq\\onedrive\\documents\\github\\docker_practice-\\testdocker\\testdocker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{75F5763C-4F25-4A80-8B73-B62CF79231F1}|TestDocker.csproj|solutionrelative:testdocker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{75F5763C-4F25-4A80-8B73-B62CF79231F1}|TestDocker.csproj|c:\\users\\tranq\\onedrive\\documents\\github\\docker_practice-\\testdocker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{75F5763C-4F25-4A80-8B73-B62CF79231F1}|TestDocker.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{75F5763C-4F25-4A80-8B73-B62CF79231F1}|TestDocker.csproj|c:\\users\\tranq\\onedrive\\documents\\it\\uni\\2\\3nd term\\tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\testdocker\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{75F5763C-4F25-4A80-8B73-B62CF79231F1}|TestDocker.csproj|c:\\users\\tranq\\onedrive\\documents\\github\\docker_practice-\\testdocker\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{75F5763C-4F25-4A80-8B73-B62CF79231F1}|TestDocker.csproj|solutionrelative:views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{75F5763C-4F25-4A80-8B73-B62CF79231F1}|TestDocker.csproj|c:\\users\\tranq\\onedrive\\documents\\it\\uni\\2\\3nd term\\tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\testdocker\\testdocker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{75F5763C-4F25-4A80-8B73-B62CF79231F1}|TestDocker.csproj|solutionrelative:testdocker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,11 +46,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\tranq\\OneDrive\\Documents\\GitHub\\docker_practice-\\TestDocker\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\tranq\\OneDrive\\Documents\\GitHub\\docker_practice-\\TestDocker\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-07T03:54:20.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Privacy.cshtml",
-              "DocumentMoniker": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\Views\\Home\\Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\tranq\\OneDrive\\Documents\\GitHub\\docker_practice-\\TestDocker\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
-              "ToolTip": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\tranq\\OneDrive\\Documents\\GitHub\\docker_practice-\\TestDocker\\Views\\Home\\Privacy.cshtml",
               "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -54,32 +75,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TestDocker.csproj",
-              "DocumentMoniker": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\TestDocker.csproj",
+              "DocumentMoniker": "C:\\Users\\tranq\\OneDrive\\Documents\\GitHub\\docker_practice-\\TestDocker\\TestDocker.csproj",
               "RelativeDocumentMoniker": "TestDocker.csproj",
-              "ToolTip": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\TestDocker.csproj",
+              "ToolTip": "C:\\Users\\tranq\\OneDrive\\Documents\\GitHub\\docker_practice-\\TestDocker\\TestDocker.csproj",
               "RelativeToolTip": "TestDocker.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-19T04:29:50.882Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T04:23:56.519Z",
+              "WhenOpened": "2025-06-19T04:29:50.882Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\tranq\\OneDrive\\Documents\\GitHub\\docker_practice-\\TestDocker\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\tranq\\OneDrive\\Documents\\GitHub\\docker_practice-\\TestDocker\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T04:23:56.519Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -25,32 +25,6 @@
           "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
-              "ToolTip": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-19T04:56:55.494Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TestDocker",
-              "DocumentMoniker": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\TestDocker.csproj",
-              "RelativeDocumentMoniker": "TestDocker.csproj",
-              "ToolTip": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\TestDocker.csproj*",
-              "RelativeToolTip": "TestDocker.csproj*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-19T04:29:50.882Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
@@ -68,13 +42,37 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-19T04:56:55.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TestDocker.csproj",
+              "DocumentMoniker": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\TestDocker.csproj",
+              "RelativeDocumentMoniker": "TestDocker.csproj",
+              "ToolTip": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\TestDocker.csproj",
+              "RelativeToolTip": "TestDocker.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-19T04:29:50.882Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\tranq\\OneDrive\\Documents\\IT\\Uni\\2\\3nd term\\Tri\u1EC3n khai ph\u1EA7n m\u1EC1m\\test docker\\TestDocker\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-19T04:23:56.519Z",
               "EditorCaption": ""

@@ -60,7 +60,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo 'Building Docker image p27625:latest'
-                bat 'docker build -t p27625:latest -f "%WORKSPACE%\\Dockerfile" .'
+                bat 'docker build -t p27625:latest -f "%WORKSPACE%\\TestDocker\\Dockerfile" "%WORKSPACE%\\TestDocker"'
             }
         }
 

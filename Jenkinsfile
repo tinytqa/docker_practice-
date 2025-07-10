@@ -93,11 +93,20 @@ pipeline {
             }
         }
 
-        stage('Cleanup') {
-            steps {
-                bat 'docker rmi %IMAGE_NAME%:latest || echo "Image not found"'
-            }
-        }
+        stage('Cleanup Old Container & Image') {
+    steps {
+        bat '''
+            docker ps -a -q --filter "ancestor=tinytqa/testdockerapp:latest" > tmp_container.txt
+            for /f %%i in (tmp_container.txt) do (
+                docker stop %%i || echo "Already stopped"
+                docker rm %%i || echo "Already removed"
+            )
+            del tmp_container.txt
+            docker rmi -f tinytqa/testdockerapp:latest || echo "Image not found"
+        '''
+    }
+}
+
     }
 
     post {

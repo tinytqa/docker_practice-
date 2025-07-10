@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_CREDENTIALS = 'dockerhub-credentials' // ID credential Jenkins đã cấu hình
-        IMAGE_NAME = 'yourdockerhubusername/testdockerapp' // Đổi thành Docker Hub repo của bạn
+        DOCKERHUB_CREDENTIALS = 'docker_credential1' // ID credential Jenkins đã cấu hình
+        IMAGE_NAME = 'tinytqa/testdockerapp' // Đổi thành Docker Hub repo của bạn
     }
 
     stages {

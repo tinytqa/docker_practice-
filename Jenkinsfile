@@ -1,8 +1,12 @@
 pipeline {
     agent any
 
-    stages {
+    environment {
+        DOCKERHUB_CREDENTIALS = 'dockerhub-credentials' // ID credential Jenkins đã cấu hình
+        IMAGE_NAME = 'yourdockerhubusername/testdockerapp' // Đổi thành Docker Hub repo của bạn
+    }
 
+    stages {
         stage('Clone') {
             steps {
                 git branch: 'main', url: 'https://github.com/tinytqa/docker_practice-'
@@ -17,7 +21,7 @@ pipeline {
 
         stage('Restore Package') {
             steps {
-                echo 'Restoring TestDocker.sln'
+                echo 'Restoring packages'
                 bat 'dotnet restore TestDocker/TestDocker.sln'
             }
         }
@@ -29,22 +33,22 @@ pipeline {
             }
         }
 
-        stage('Publish to Folder') {
+        stage('Publish') {
             steps {
-                echo 'Publishing to local ./publish folder'
+                echo 'Publishing project'
                 bat 'dotnet publish TestDocker/TestDocker.sln -c Release -o ./publish'
             }
         }
-        stage('Check DLL name') {
+
+        stage('Check DLL') {
             steps {
                 bat 'dir /b publish\\*.dll'
             }
         }
 
-
-        stage('Copy to IIS Folder') {
+        stage('Copy to IIS') {
             steps {
-                echo 'Copying published files to IIS folder'
+                echo 'Copying to IIS folder'
                 bat 'xcopy "%WORKSPACE%\\publish\\*" "C:\\wwwroot\\myproject\\" /E /Y /I /R'
             }
         }
@@ -53,7 +57,6 @@ pipeline {
             steps {
                 powershell '''
                     Import-Module WebAdministration
-
                     if (-not (Test-Path IIS:\\Sites\\MyDockerSite)) {
                         New-Website -Name "MyDockerSite" -Port 81 -PhysicalPath "C:\\wwwroot\\myproject"
                     } else {
@@ -65,63 +68,25 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                echo 'Building Docker image p27625:latest'
-                bat 'docker build -t p27625:latest "%WORKSPACE%"'
+                echo 'Building Docker image'
+                bat 'docker build -t %IMAGE_NAME%:latest "%WORKSPACE%"'
             }
         }
 
-        stage('Run Docker Container') {
+        stage('Run Docker Container Locally') {
             steps {
-                echo 'Running Docker container from image p27625:latest'
-                // Xoá container cũ nếu tồn tại để tránh lỗi name already in use
+                echo 'Running Docker container'
                 bat '''
                     docker rm -f p27625run || echo "No existing container"
-                    docker run -d --name p27625run -p 91:80 p27625:latest
+                    docker run -d --name p27625run -p 91:80 %IMAGE_NAME%:latest
                 '''
             }
         }
-        pipeline {
-    agent any  // Jenkins agent sử dụng để thực hiện các bước
 
-    environment {
-        // Cấu hình Docker Hub Credentials (ID bạn đã tạo ở bước trước)
-        DOCKERHUB_CREDENTIALS = 'dockerhub-credentials'
-        IMAGE_NAME = 'myusername/my-app'  // Tên image trên Docker Hub
-    }
-
-    stages {
-        stage('Checkout') {
-            steps {
-                // Checkout mã nguồn từ GitHub hoặc repository của bạn
-                git 'https://github.com/your-username/your-repository.git'
-            }
-        }
-
-        stage('Build Docker Image') {
+        stage('Login & Push to Docker Hub') {
             steps {
                 script {
-                    // Build Docker image từ Dockerfile
-                    docker.build("${IMAGE_NAME}:latest")
-                }
-            }
-        }
-
-        stage('Login to Docker Hub') {
-            steps {
-                script {
-                    // Đăng nhập vào Docker Hub để push image
-                    docker.withRegistry('https://index.docker.io/v1/', DOCKERHUB_CREDENTIALS) {
-                        // Đăng nhập với Docker Hub credentials
-                    }
-                }
-            }
-        }
-
-        stage('Push Docker Image') {
-            steps {
-                script {
-                    // Đẩy Docker image lên Docker Hub
-                    docker.withRegistry('https://index.docker.io/v1/', DOCKERHUB_CREDENTIALS) {
+                    docker.withRegistry('https://index.docker.io/v1/', "${DOCKERHUB_CREDENTIALS}") {
                         docker.image("${IMAGE_NAME}:latest").push()
                     }
                 }
@@ -130,21 +95,17 @@ pipeline {
 
         stage('Cleanup') {
             steps {
-                // Dọn dẹp các image Docker không cần thiết sau khi push
-                sh 'docker rmi ${IMAGE_NAME}:latest'
+                bat 'docker rmi %IMAGE_NAME%:latest || echo "Image not found"'
             }
         }
     }
 
     post {
         success {
-            echo 'Docker image đã được đẩy lên Docker Hub thành công!'
+            echo '✅ Docker image đã được build và push thành công!'
         }
         failure {
-            echo 'Pipeline thất bại!'
+            echo '❌ Có lỗi xảy ra trong pipeline!'
         }
-    }
-}
-   
     }
 }

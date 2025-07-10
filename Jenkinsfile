@@ -80,5 +80,71 @@ pipeline {
                 '''
             }
         }
+        pipeline {
+    agent any  // Jenkins agent sử dụng để thực hiện các bước
+
+    environment {
+        // Cấu hình Docker Hub Credentials (ID bạn đã tạo ở bước trước)
+        DOCKERHUB_CREDENTIALS = 'dockerhub-credentials'
+        IMAGE_NAME = 'myusername/my-app'  // Tên image trên Docker Hub
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout mã nguồn từ GitHub hoặc repository của bạn
+                git 'https://github.com/your-username/your-repository.git'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    // Build Docker image từ Dockerfile
+                    docker.build("${IMAGE_NAME}:latest")
+                }
+            }
+        }
+
+        stage('Login to Docker Hub') {
+            steps {
+                script {
+                    // Đăng nhập vào Docker Hub để push image
+                    docker.withRegistry('https://index.docker.io/v1/', DOCKERHUB_CREDENTIALS) {
+                        // Đăng nhập với Docker Hub credentials
+                    }
+                }
+            }
+        }
+
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    // Đẩy Docker image lên Docker Hub
+                    docker.withRegistry('https://index.docker.io/v1/', DOCKERHUB_CREDENTIALS) {
+                        docker.image("${IMAGE_NAME}:latest").push()
+                    }
+                }
+            }
+        }
+
+        stage('Cleanup') {
+            steps {
+                // Dọn dẹp các image Docker không cần thiết sau khi push
+                sh 'docker rmi ${IMAGE_NAME}:latest'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Docker image đã được đẩy lên Docker Hub thành công!'
+        }
+        failure {
+            echo 'Pipeline thất bại!'
+        }
+    }
+}
+
     }
 }

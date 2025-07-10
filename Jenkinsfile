@@ -86,9 +86,9 @@ pipeline {
         stage('Login & Push to Docker Hub') {
             steps {
                 script {
-                    docker.withRegistry('https://index.docker.io/v1/', "${DOCKERHUB_CREDENTIALS}") {
-                        docker.image("${IMAGE_NAME}:latest").push()
-                    }
+                    docker.withRegistry('https://index.docker.io/v1/', 'docker_credential1') {
+    docker.image("${IMAGE_NAME}:latest").push()
+}
                 }
             }
         }

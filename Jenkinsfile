@@ -95,8 +95,10 @@ pipeline {
 
         stage('Cleanup') {
             steps {
-                // Dọn dẹp các image Docker không cần thiết sau khi push
-                sh 'docker rmi ${IMAGE_NAME}:latest'
+                       bat '''
+            REM Không xoá image nữa để giữ lại sau khi pipeline chạy
+            echo "Skipped image removal"
+        '''
             }
         }
 
